@@ -1,0 +1,31 @@
+{
+  "name": "@wetdogweather/terrier",
+  "version": "1.0.1",
+  "description": "Terrier Weather Visualization Library",
+  "keywords": [
+    "Terrier",
+    "Weather",
+    "Visualization",
+    "WebGL"
+  ],
+  "homepage": "https://github.com/WetDogWeather/terrier-npm#readme",
+  "bugs": {
+    "url": "https://github.com/WetDogWeather/terrier-npm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WetDogWeather/terrier-npm.git"
+  },
+  "license": "ISC",
+  "author": "Wet Dog Weather Inc",
+  "type": "commonjs",
+  "main": "src/terrier.js",
+  "files": [
+    "public/WhirlyGlobeWeb.wasm",
+    "src/terrier.js",
+    "public/WhirlyGlobeWeb.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
