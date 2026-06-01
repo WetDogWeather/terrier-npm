@@ -3,9 +3,9 @@
 
 This is the NPM package repo for the Terrier toolkit.  Actual examples are on the [TerrierWeb repo](https://github.com/WetDogWeather/TerrierWeb).
 
-Terrier is a weather visualization package for web and mobile.  This is the web version and the native version can be obtained from [Wet Dog Weather](https://wetdogweawther.com).
+Terrier is a weather visualization package for web and mobile.  This is the web version and the native version can be obtained from [Wet Dog Weather](https://wetdogweather.com).
 
-You'll need an API key to access Wet Dog Weather data.  [Contact us](https://wetdogweawther.com) for details.
+You'll need an API key to access Wet Dog Weather data.  [Contact us](https://wetdogweather.com) for details.
 
 ### Documentation
 Terrier will work with a variety of map toolkits, including MapLibre, Mapbox, ESRI Web SDK, Leaflet, and OpenLayers.  Consult our [TerrierWeb repo](https://github.com/WetDogWeather/TerrierWeb) for examples of each.  We'll include the MapLibre example here.
