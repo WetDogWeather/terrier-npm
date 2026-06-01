@@ -15,7 +15,7 @@ To add Terrier, you'll need to do the following.
 
 Add the Terrier package.
 
-    npm install @WetDogWeather/Terrier
+    npm install @wetdogweather/Terrier
 
 In your map JS (or TS) file you'll need to import Terrier.
 

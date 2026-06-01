@@ -5,8 +5,16 @@ var wgWASMurl = "WhirlyGlobeWeb.wasm"
 
 // Trigger vite to include these which we'll load ourselves
 if (typeof import.meta !== 'undefined') {
-    import("../public/WhirlyGlobeWeb.js?url").then((resURL) =>  wgJSurl = resURL.default)
-    import("../public/WhirlyGlobeWeb.wasm?url").then((resURL) =>  wgWASMurl = resURL.default)
+    import("../public/WhirlyGlobeWeb.js?url").then((resURL) => {
+                                                        if ('default' in resURL) {
+                                                            wgJSurl = resURL.default
+                                                        }
+                                                    })
+    import("../public/WhirlyGlobeWeb.wasm?url").then((resURL) => {
+                                                        if ('default' in resURL) {
+                                                            wgWASMurl = resURL.default
+                                                        }
+                                                    })
 }
 
 // Inside a bounding box check
