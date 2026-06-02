@@ -4,7 +4,7 @@ var wgJSurl = "WhirlyGlobeWeb.js"
 var wgWASMurl = "WhirlyGlobeWeb.wasm"
 
 // Trigger vite to include these which we'll load ourselves
-if (typeof import.meta !== 'undefined') {
+if (import.meta.env.PROD || import.meta.env.DEV) {
     import("../public/WhirlyGlobeWeb.js?url").then((resURL) => {
                                                         if ('default' in resURL) {
                                                             wgJSurl = resURL.default
@@ -1714,8 +1714,20 @@ class TerrierModule {
             //  this also kicks off Emscriten
             var s = document.createElement('script');
             s.type = 'text/javascript';
-            // Note: May cause problems if you need an absolute path
-            s.src = wgJSurl;
+            // If it's resolved to an absolute path just load that
+            if (wgJSurl.includes('/')) {
+                s.src = wgJSurl
+            } else {
+                if  (typeof self != 'undefined' && self.location && self.location.href) {
+                    s.src = self.location.href + wgJSurl;
+                } else {
+                    if (typeof document != 'undefined' && document.currentScript) {
+                        s.src = document.currentScript.src + wgJSurl;
+                    } else {
+                        s.src = wgJSurl;
+                    }
+                }
+            }
             s.defer = 'defer';
             document.body.appendChild(s);            
             this.libraryLoaded = true
